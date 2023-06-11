@@ -1,0 +1,27 @@
+<!-- <p>login works!</p> -->
+<div class="d1">
+  <img src="https://i.postimg.cc/0NP7VxFj/pexels-pixabay-147411.jpg" height="100%" width="100%" alt="">
+<div class="box">
+  <h2>LOGIN</h2>
+  <form [formGroup]="loginForm" >
+    <div class="inputBox">
+      <input type="email" name="email" id="email" formControlName="email" placeholder="Email" required="">
+      <div *ngIf="this.loginForm.get('email')?.errors && this.loginForm.get('email')?.touched" style="color: red;">Invalid Email</div>
+    </div>
+
+    <div class="inputBox">
+      <input type="password" formControlName="pswd" name="pswd" id="pswd" placeholder="password" required="">
+      <div *ngIf="this.loginForm.get('pswd')?.errors && this.loginForm.get('pswd')?.touched" style="color: red;">Invalid Password</div>
+    </div>
+    <div class="links">
+      <a routerLink="/register">Forgot Password</a>  
+      <a routerLink="/register">Sign up</a>
+  </div>
+
+  <br>
+
+    <input (click)="login()" type="submit" name="" value="Login"><br>
+
+</form>
+</div>
+</div>

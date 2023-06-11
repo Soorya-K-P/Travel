@@ -1,0 +1,41 @@
+<!-- <pre>{{searchTerm | json}}</pre> -->
+
+ 
+
+<app-header></app-header>
+<section class="py-5">
+    <div class="p3">
+        <h1>Featured Destinations</h1>
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center " >
+            <div class="col mb-5" *ngFor="let destination of alldestinations  | filter:searchTerm:'title' ">
+                <div class="card h-100 align-items-center">
+                    <!-- Recipe image-->
+                    <img class="card-img-top" [src]="destination.image" alt="..."/>
+                    <!-- Product rating-->
+                    <!-- ⭐{{destination.Rating}} -->
+
+                    <!-- Recipe details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--Recipe name-->
+                            <h5 class="fw-bolder">{{destination.title}}</h5>
+                            <!-- price -->
+                            ₹{{destination.price}}
+                        </div>
+                    </div>
+                    <!-- Recipe actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <button  class="btn btn-outline-danger mt-auto" routerLink="/description/{{destination.id}}">View More</button> 
+                            <!-- <button  class="btn btn-outline-danger mt-auto" routerLink=""><i class="fa fa-heart"></i></button> &nbsp; -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+</div>
+</section>
+
+<app-footer></app-footer>

@@ -1,0 +1,65 @@
+<app-header></app-header>
+
+
+<section class="banner">
+    <div class="banner-highlights">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Get 30% on top destination</h2>
+                    <p>Book your tickets before 31st march and avail 30% flat discount.</p>
+                </div>
+                <div class="col-md-4">
+                    <button type="button" class="booking-btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" >Book Now</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<!-- Modal -->
+<form [formGroup]="booknowForm">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Book Now</h5> 
+          <!-- <b>Grand Total:{{grand}}</b> -->
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h1>Booking Address</h1>
+            <input  name="name" formControlName="name"  type="text" placeholder="Enter your name" class="form-control mb-2" >
+            <div *ngIf="this.booknowForm.get('name')?.errors && this.booknowForm.get('name')?.touched" style="color: red;">Invalid name</div>
+
+      <input name="phone" formControlName="phone"  type="text" placeholder="Contact no" class="form-control mb-2" >
+            <div *ngIf="this.booknowForm.get('phone')?.errors && this.booknowForm.get('phone')?.touched" style="color: red;">Invalid contact no</div>
+
+      <input name="destination" formControlName="destination"  type="text" placeholder="Destination" class="form-control mb-2" >
+            <div *ngIf="this.booknowForm.get('destination')?.errors && this.booknowForm.get('destination')?.touched" style="color: red;">Invalid destination</div>
+
+      <input name="totaladults" formControlName="totaladults"  type="text" placeholder="Total adults" class="form-control mb-2" >
+            <div *ngIf="this.booknowForm.get('totaladults')?.errors && this.booknowForm.get('totaladults')?.touched" style="color: red;">Invalid adults</div>
+
+      <input name="children" formControlName="children"  type="text" placeholder="Total children" class="form-control mb-2" >
+            <div *ngIf="this.booknowForm.get('children')?.errors && this.booknowForm.get('children')?.touched" style="color: red;">Invalid children</div>
+
+      <input name="days" formControlName="days"  type="text" placeholder="Number of days" class="form-control mb-2" >
+            <div *ngIf="this.booknowForm.get('days')?.errors && this.booknowForm.get('days')?.touched" style="color: red;">Invalid days</div>
+
+        </div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="bookNow()">Booked</button>
+  </div>
+      </div>
+    </div>
+</div>
+</form>
+</section>
+
+<app-footer></app-footer>
+
+
+

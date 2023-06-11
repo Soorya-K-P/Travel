@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/"><h1 class=" text-light text-center"><i class="fa-sharp fa-solid fa-plane-up"></i> &nbsp; Travel Across The Globe</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="destinations/all-destinations">All-destinations &nbsp;</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="destinations/gallery">Gallery &nbsp;</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="destinations/contact">Contact &nbsp;</a> 
+          </li>
+          <li class="nav-item1"><input (keyup)="search($event)" type="text" placeholder="Search Your Destinations" class="form-control"></li>
+
+        </ul>
+        <!-- <form class="d-flex">
+          <a routerLink="destinations/favourite" class="btn btn-outline-light" type="submit">
+            <i class="fa fa-heart"></i>
+              Favourite
+              <span class="badge bg-light text-dark ms-1 rounded-pill"></span>
+          </a>
+        </form> -->
+        <form class="d-flex1">
+          <button class="btn btn-outline-primary " type="submit" (click)="logout()">Logout</button>
+        </form>
+      </div> 
+    </div><br><br><br><br>
+    <div></div>
+  </nav>
+ 

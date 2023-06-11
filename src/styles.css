@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+    /* display: transparent;
+    align-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size:cover; */
+    /* background: #34495e; */
+    /* background-image: url("https://i.postimg.cc/0NP7VxFj/pexels-pixabay-147411.jpg"); */
+  
+
+}

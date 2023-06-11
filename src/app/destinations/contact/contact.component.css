@@ -1,0 +1,26 @@
+.banner{
+    height: 80%;
+    /* background-image: url(); */
+    
+    background-image: url("https://i.postimg.cc/hvfrFTTy/banner2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 14%;
+}
+.banner-highlights{
+    padding: 70px 0;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    color: #fff;
+}
+.booking-btn{
+    width: 120px;
+    padding: 8px 0;
+    outline: none !important;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    background: transparent;
+    color: #fff;
+    margin-top: 20px;
+}
